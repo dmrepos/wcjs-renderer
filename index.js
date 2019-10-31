@@ -221,10 +221,12 @@ module.exports = {
         arr1[0] = 0;
         arr2[0] = 128;
 
+        if(gl!=undefined){
         gl.y.fill(1, 1, arr1);
         gl.u.fill(1, 1, arr2);
         gl.v.fill(1, 1, arr2);
 
         gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+        }
     }
 };
